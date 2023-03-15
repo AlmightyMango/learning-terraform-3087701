@@ -71,12 +71,7 @@ module "blog" {
     {
       port        = 80
       protocol    = "HTTP"
-      action_type = "redirect"
-      redirect = {
-        port        = "80"
-        protocol    = "HTTP"
-        status_code = "HTTP_301"
-      }
+      target_group_index = 0 
     }
   ]
 
