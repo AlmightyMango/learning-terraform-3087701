@@ -73,8 +73,8 @@ module "blog" {
       protocol    = "HTTP"
       action_type = "redirect"
       redirect = {
-        port        = "443"
-        protocol    = "HTTPS"
+        port        = "80"
+        protocol    = "HTTP"
         status_code = "HTTP_301"
       }
     }
