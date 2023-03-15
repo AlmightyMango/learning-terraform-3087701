@@ -57,7 +57,7 @@ module "blog_alb" {
   vpc_id             = module.vpc.vpc_id
   subnets            = module.vpc.public_subnets
   security_groups    = module.blog_sg.security_group_id
-}
+
   target_groups = [
     {
       name_prefix      = "blog-"
@@ -79,7 +79,6 @@ module "blog_alb" {
     Environment = "dev"
   }
 }
-
 module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "4.17.1"
