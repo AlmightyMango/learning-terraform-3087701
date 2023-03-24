@@ -9,7 +9,7 @@ data "aws_ami" "app_ami" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
-  owner = ["var.ami_filter.owner"]
+  owners = [var.ami_filter.owner]
 }
 
 module "blog_vpc" {
