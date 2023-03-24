@@ -23,7 +23,7 @@ module "vpc" {
   }
 }
 
-resource "aws_security_group" "blog" {
+/*resource "aws_security_group" "blog" {
   name        = "blog"
   description = "Allow HTTP and HTTPS in. Allow everything out"
 
@@ -33,7 +33,7 @@ resource "aws_security_group" "blog" {
   security_groups    = [module.blog_sg.security_group_id]
   image_id           = data.aws_ami.app_ami.id
   instance_type      = var.instance_type
-} 
+} */
 
 module "autoscaling" {
   source   = "terraform-aws-modules/autoscaling/aws"
