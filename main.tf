@@ -9,8 +9,9 @@ data "aws_ami" "app_ami" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
-  owners = ["var.ami_filter.owner"] # Bitnami
+  owners = ["var.ami_filter.owner"]
 }
+
 module "blog_vpc" {
   source = "terraform-aws-modules/vpc/aws"
   name = var.environment.name
